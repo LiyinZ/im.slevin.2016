@@ -1,0 +1,28 @@
+a {
+  cursor: pointer;
+}
+
+.pad-btm {
+  padding-bottom: 100px;
+}
+
+.brand-logo {
+  margin: auto;
+  height: 150px;
+}
+
+.card-margin {
+  margin: 20px 0 40px;
+}
+
+.grey-bg {
+  background: $blue-grey-100;
+}
+
+.embed-responsive-ratio {
+  padding-bottom: 56.25%;
+
+  @media screen and (max-width: $screen-sm) {
+    padding-bottom: 75%;
+  }
+}
