@@ -32,21 +32,31 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Slevin.im</a>
+          <a class="navbar-brand" href="#">Slevin.im</a>
         </div>
 
         <div class="collapse navbar-collapse" id="navigation-example">
           <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="components-documentation.html" class="btn" target="_blank">
-                Work
-              </a>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Work <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#neat">
+                    N.E.A.T
+                  </a>
+                </li>
+                <li>
+                  <a href="#slider">
+                    Colour Slider
+                  </a>
+                </li>
+              </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resume <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="http://www.creative-tim.com/product/material-kit" target="_blank">
+                  <a href="assets/liyin_zhang_resume.pdf" target="_blank">
                     Download 
                     <i class="fa fa-download" aria-hidden="true"></i>
                   </a>
@@ -93,9 +103,9 @@
     <div class="wrapper">
       <div class="header header-filter" style="background-image: url('assets/img/bg2.jpg');"></div>
 
-      <div class="main main-raised">
+      <div class="main main-raised pad-btm">
         <div class="profile-content">
-          <div class="container pad-btm">
+          <div class="container">
             <div class="row">
               <div class="profile">
                 <div class="avatar">
@@ -111,19 +121,19 @@
               <img class="img-responsive brand-logo" src="assets/img/brand-logo.svg" alt="Brand logo">
             </div>
             <div class="description text-center">
-              <p>Hi! My name is Liyin Zhang, but feel free to call my usual name Slevin. I've recently graduated from Georgian College's Web Design and Development Program. Here you'll find my resume and a few projects that I've worked on recently. Hope to hear from you!</p>
+              <p>Hi! My name is Liyin Zhang, but feel free to call my usual name <span class="text-primary">Slevin</span>. I've recently graduated from Georgian College's Web Design and Development Program. Here you'll find my resume and a few projects that I've worked on recently. Hope to hear from you!</p>
             </div>
 
             <div class="row text-center">
-                <button class="btn btn-raised btn-primary">
+                <a href="assets/liyin_zhang_resume.pdf" target="_blank" class="btn btn-raised btn-primary">
                   Resume 
                   <i class="fa fa-download" aria-hidden="true"></i>
-                </button>
-              <br>
-              <br>
+                </a>
             </div>
-            <h2 class="text-center">Work</h2>
-            <hr id="work">
+          </div>
+        </div>
+        <div id="neat" class="neat-app grey-bg">
+          <div class="container">
             <div class="row">
               <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
                 <h3>N.E.A.T</h3>
@@ -219,6 +229,9 @@
             </div>
             <br>
             <hr>
+          </div> <!-- work container -->
+        </div> <!-- work content wrapper -->
+          <div id="slider" class="container">
             <div class="row">
               <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
                 <h3>Angular Color Slider Directive</h3>
@@ -239,13 +252,12 @@
                   </dd>
                 </dl>
               </div>
-              </div>
-            </div>
+            </div> <!-- color slider row -->
           </div>
-        </div>
-      </div>
+      </div> <!-- main raised -->
 
-    </div>
+    </div> <!-- wrapper -->
+
     <footer class="footer">
       <div class="container">
         <nav class="pull-left">
