@@ -43,6 +43,13 @@ gulp.task('img', function() {
     .pipe(gulp.dest('./assets/img'));
 });
 
+gulp.task('html', function() {
+  return gulp.src('index.dev.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(rename('index.html'))
+    .pipe(gulp.dest('./'));
+});
+
 gulp.task('watch:sass', function() {
   gulp.watch('./assets/sass/**/*.scss', ['sass']);
 });
@@ -55,13 +62,8 @@ gulp.task('dist', function() {
   gulp.src('./assets/dist/all.css')
     .pipe(nano())
     .pipe(gulp.dest('./assets/dist'));
-
-  return gulp.src('index.dev.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(rename('index.html'))
-    .pipe(gulp.dest('./'));
 })
 
 gulp.task('build', function() {
-  runSeq(['bs', 'sass'], ['css', 'js'], 'dist');
+  runSeq(['bs', 'sass', 'html'], ['css', 'js'], 'dist');
 });
