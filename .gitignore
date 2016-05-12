@@ -1,3 +1,4 @@
+dist
 node_modules
 .DS_Store
 bootstrap*.css
@@ -5,3 +6,4 @@ material-kit.css
 all*.css
 temp.txt
 *.pdf
+index.html
