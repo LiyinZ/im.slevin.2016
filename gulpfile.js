@@ -8,7 +8,8 @@ var prefix = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
 var htmlmin = require('gulp-htmlmin');
 var rename = require('gulp-rename');
-var runseq = require('gulp-run-sequence');
+var runSeq = require('run-sequence');
+var imagemin = require('gulp-imagemin');
 
 
 gulp.task('bs', function() {
@@ -36,6 +37,12 @@ gulp.task('js', function() {
     .pipe(gulp.dest('./assets/dist'));
 });
 
+gulp.task('img', function() {
+  return gulp.src('./assets/images/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./assets/img'));
+});
+
 gulp.task('watch:sass', function() {
   gulp.watch('./assets/sass/**/*.scss', ['sass']);
 });
@@ -56,5 +63,5 @@ gulp.task('dist', function() {
 })
 
 gulp.task('build', function() {
-  runseq(['bs', 'sass'], ['css', 'js'], 'dist');
+  runSeq(['bs', 'sass'], ['css', 'js'], 'dist');
 });
