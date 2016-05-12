@@ -4,7 +4,7 @@ var fixedTop = false;
 
 var navbar_initialized = false;
 
-var activeHash = '';
+// var activeHash = '';
 
 $(document).ready(function(){
 
@@ -27,7 +27,7 @@ $(document).ready(function(){
 
   $('.scroll').click(function(ev) {
     ev.preventDefault();
-    if (activeHash != this.hash) {
+    // if (activeHash != this.hash) {
       var dest = 0;
       var heightDiff = $(document).height() - $(window).height();
       if ($(this.hash).offset().top > heightDiff) {
@@ -39,8 +39,8 @@ $(document).ready(function(){
       $('html, body').animate({
         scrollTop: dest
       }, 400, 'swing');
-      activeHash = this.hash;
-    }
+      // activeHash = this.hash;
+    // }
   });
 });
 
