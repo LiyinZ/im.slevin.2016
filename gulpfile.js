@@ -8,6 +8,7 @@ var prefix = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
 var htmlmin = require('gulp-htmlmin');
 var rename = require('gulp-rename');
+var runseq = require('gulp-run-sequence');
 
 
 gulp.task('bs', function() {
@@ -53,3 +54,7 @@ gulp.task('dist', function() {
     .pipe(rename('index.html'))
     .pipe(gulp.dest('./'));
 })
+
+gulp.task('build', function() {
+  runseq(['bs', 'sass'], ['css', 'js'], 'dist');
+});
